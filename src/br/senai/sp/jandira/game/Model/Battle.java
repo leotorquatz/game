@@ -43,6 +43,14 @@ public class Battle {
                 System.out.println("--------------------------");
 
                 int danoPlayer = (int) (Math.random() * 20) + 1;
+                int defesaEnemy = (int) (Math.random() * 20) + 1;
+
+                int danoReal = danoPlayer - defesaEnemy;
+
+                if (danoReal < 0){
+                    danoReal = 0;
+                }
+
                 enemy.SubTraiVida(danoPlayer);
 
                 System.out.println("--------------------------");
