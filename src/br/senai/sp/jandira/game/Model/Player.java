@@ -5,12 +5,22 @@ public class Player {
     public String skin;
     public int life;
 
-    public Player(){
+    public Player() {
         life = 100;
     }
-    public int getLife(){
+
+    public int getLife() {
         return life;
     }
 
+    public void SubTraiVida(int danoEnemy) {
+
+        life -= danoEnemy;
+
+        if (life < 0) {
+            life = 0;
+        }
+
+    }
 
 }
